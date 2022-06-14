@@ -8,12 +8,19 @@
 // Chiedo i dati al utente
 const userEvenOrOdd = prompt('Scegli pari o dispari');
 const userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
+console.log('Numero del utente ' + userNumber);
 
+// Numero random dal computer 
 const computerNumber = getRndInteger(1, 5);
+console.log('Numero del computer ' + computerNumber);
 
+// Somma tra il numero del utente e il computer
 const result = sumGenerator(userNumber, computerNumber);
+console.log('Somma ' + result);
 
+// Stabilire se la somma è pari o dispari
 const resultEvenOrOdd = isEvenOrOdd(result);
+console.log('Pari o Dispari: ' + resultEvenOrOdd);
 
 
 // Genero un numero per il computer usando una funzione
@@ -30,7 +37,6 @@ function sumGenerator (num1, num2) {
 
 // Stabilisco attraverso una funzione
 // La somma dei numeri dati dal utente e dal computer è pari o dispari
-
 function isEvenOrOdd (number) {
     let EvenOrOdd;
 
@@ -44,16 +50,17 @@ function isEvenOrOdd (number) {
  
 }
 
+// Decreto il risultato 
 if (userEvenOrOdd === resultEvenOrOdd) {
     alert('Hai vinto');
 }else{
     alert('Hai perso');
 }
 
-console.log(userNumber);
-console.log(computerNumber);
-console.log(result);
-console.log(resultEvenOrOdd);
+
+
+
+
 
 
 
